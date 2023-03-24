@@ -31,7 +31,7 @@ buildscript {
         classpath "gradle.plugin.org.gradle.crypto:checksum:$checksumPluginVersion"
     }
 }
-apply plugin: 'com.aestasit.sshoogr.gradle.sshoogr-parentbuild'
+
 
 rootProject.name = 'sshoogr'
 
