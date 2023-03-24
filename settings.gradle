@@ -21,7 +21,6 @@ buildscript {
         mavenLocal()
     }
     dependencies {
-        classpath "com.aestasit.sshoogr.gradle:sshoogr-parentbuild:$sshoogrBuildVersion"
         classpath "com.github.breadmoirai:github-release:$releasePluginVersion"
         classpath "org.ajoberstar:gradle-git-publish:$gitPluginVersion"
         classpath "org.kordamp.gradle:integrationtest-gradle-plugin:$kordampPluginVersion"
