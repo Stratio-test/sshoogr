@@ -34,28 +34,16 @@ buildscript {
 
 rootProject.name = 'sshoogr'
 
-projects {
-    plugins {
-        all {
-            id 'idea'
-        }
-        path(':guide') {
-            id 'org.kordamp.gradle.guide'
-            id 'org.ajoberstar.git-publish'
-        }
-        dir('subprojects') {
-            id 'java-library'
-            id 'groovy'
-            id 'application'
-            id 'org.kordamp.gradle.codenarc'
-            id 'org.kordamp.gradle.sonar'
-            id 'org.kordamp.gradle.integration-test'
-            id 'io.sdkman.vendors'
-            id 'org.gradle.crypto.checksum'
-            id 'com.github.breadmoirai.github-release'
-        }
-    }
-}
+project(":subprojects").projectDir = file("java-librarye")
+project(":subprojects").projectDir = file("groovy")
+project(":subprojects").projectDir = file("application")
+project(":subprojects").projectDir = file("org.kordamp.gradle.codenarc")
+project(":subprojects").projectDir = file("org.kordamp.gradle.sonar")
+project(":subprojects").projectDir = file("org.kordamp.gradle.integration-test")
+project(":subprojects").projectDir = file("io.sdkman.vendors")
+project(":subprojects").projectDir = file("org.gradle.crypto.checksum")
+project(":subprojects").projectDir = file("com.github.breadmoirai.github-release")
+
 
 enforce {
     rule(enforcer.rules.BanDuplicateClasses) { r ->
