@@ -5,7 +5,7 @@ plugins {
     id 'java-library'
 }
 
-mainClassName = 'com.stratio.cd.HelloWorld'
+mainClassName = 'com.stratio.sshoogr'
 
 repositories {
     mavenCentral()
@@ -14,21 +14,17 @@ repositories {
 sourceCompatibility = 11
 targetCompatibility = 11
 
-dependencies {
-    implementation "joda-time:joda-time:2.2"
-    testImplementation "junit:junit:4.12"
-}
 
 jar {
-    archiveBaseName = 'cd-test-gradle'
+    archiveBaseName = 'sshoogr'
     archiveVersion = project.version
 }
 
 publishing {
     publications {
         myLibrary(MavenPublication) {
-            groupId = "com.stratio.cd"
-            artifactId = "cd-test-gradle"
+            groupId = "com.stratio.sshoogr"
+            artifactId = "sshoogr"
             version = version
             from components.java
         }
